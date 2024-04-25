@@ -1,0 +1,145 @@
+.Background {
+    height: 100%;
+    width: 100%;
+    background: black;
+}
+
+.SearchBackground {
+    height: 93vh;
+    width: 100%;
+    background-image: url("../components/static/mapbg_normal.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.SearchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SearchItemContainer {
+    display: flex;
+    width: 90%;
+    height: 25vh;
+    border-radius: 10px;
+    background-color: rgba(21, 21, 21, 0.81);
+    border-color: rgba(44, 0, 38, 0.81);
+    border-width: 1px;
+    border-style: solid;
+    transition-duration: 0.25s;
+    flex-shrink: 0;
+    flex-grow: 0;
+    user-select: none;
+}
+
+.SearchItemContainer:hover {
+    background-color: rgb(62, 51, 62);
+    border-color: rgba(0, 0, 0, 0.81);
+    transform: scale(1.001);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
+}
+
+.SearchResultsContainer {
+    display: flex;
+    height: 93vh;
+    width: 100%;
+    flex-direction: row;
+    padding: 10px;
+    box-sizing: border-box;
+    background-image: linear-gradient( to top right , rgb(19, 0, 16) , rgb(64, 50, 67) );
+}
+
+.SearchResultsSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;    
+    gap: 15px;
+    overflow-y: scroll;
+}
+
+
+.ProductInfoContainer {
+    display: flex;
+    height: 93vh;
+    width: 100%;
+    flex-direction: row;
+    padding: 10px;
+    box-sizing: border-box;
+    background-image: linear-gradient( to top right , rgb(19, 0, 16) , rgb(64, 50, 67) );
+}
+
+.ProductInfoSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    overflow: hidden;    
+    gap: 15px;
+    overflow-y: scroll;
+}
+
+.ProductDetailsContainer {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.ProductDetailsFooter {
+    display: flex;
+    height: 7vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    box-sizing: content-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.ProductDetailsFooterContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    height: 95%;
+    width: 95%;
+    border-radius: 10px;
+    background-image: linear-gradient(to top right , rgb(36, 15, 34), rgb(56, 29, 52));
+    box-shadow: 0px 0px 10px rgba(99, 27, 110, 0.54);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(82, 26, 76);
+    padding-right: 1vw;
+    gap: 10px;
+}
+
+.BackgroundGradient {
+    background-image: linear-gradient( to top right , rgb(19, 0, 16) , rgb(64, 50, 67) );
+}
+
+.MapTile {
+    background-image: url("../components/static/mapTileFinal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+}
