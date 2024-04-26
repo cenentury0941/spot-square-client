@@ -3,7 +3,7 @@ import "../components.css";
 import "../Animations.css";
 import "../../fonts/Fonts.css";
 import SearchItem from "../SearchItem";
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 import CategoryIcon from '@mui/icons-material/Category';
 import ProductInfo from "../ProductInfo";
 
@@ -25,8 +25,14 @@ function ProductPage(props){
             <SearchItem onClick={()=>{handleNavigation("product")}} />
             <SearchItem onClick={()=>{handleNavigation("product")}} />
         </div>
-        <div className="ProductInfoSubContainer">
+        <div className="ProductInfoSubContainer" style={{overflowY:"hidden"}}>
             <ProductInfo />
+            <div className="ProductDetailsFooter">
+                <div className="ProductDetailsFooterContent">
+                    <Button size="medium" color='secondary' style={{marginLeft:"auto"}}>$69.42</Button>
+                    <Button size="medium" variant='contained' color='secondary' onClick={onclick}>Learn More</Button>
+                </div>
+            </div>
         </div>
     </div>)
 }

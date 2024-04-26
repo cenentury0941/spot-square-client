@@ -96,13 +96,30 @@
     height: 100%;
     width: 100%;
     position: relative;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.ProductDetailsHeader {
+    display: flex;
+    height: 20vh;
+    width: 90%;
+    flex-direction: row;
+    margin-top: 20px;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-bottom-color: #403243;
+    border-style: solid;
+    padding-bottom: 15px;
+    flex-shrink: 0;
 }
 
 .ProductDetailsFooter {
     display: flex;
     height: 7vh;
     width: 100%;
-    position: absolute;
+    position: sticky;
     bottom: 0;
     box-sizing: content-box;
     align-items: center;
@@ -114,7 +131,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: end;
-    height: 95%;
+    height: 7vh;
     width: 95%;
     border-radius: 10px;
     background-image: linear-gradient(to top right , rgb(36, 15, 34), rgb(56, 29, 52));
@@ -124,6 +141,31 @@
     border-color: rgb(82, 26, 76);
     padding-right: 1vw;
     gap: 10px;
+}
+
+.ProductDetailsMainContent {
+    display: flex;
+    min-height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ProductDetailsTextContent {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.ProductDetailsImageContent {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    gap: 15px;
 }
 
 .BackgroundGradient {

@@ -1,7 +1,12 @@
 @font-face {
     font-family: 'UniSansThinCAPS';
-    src: local('UniSansThinCAPS'), url(./UniSansThin.otf) format('otf');
-  }
+    src:url('UniSansThinCAPS.ttf.woff') format('woff'),
+        url('UniSansThinCAPS.ttf.svg#UniSansThinCAPS') format('svg'),
+        url('UniSansThinCAPS.ttf.eot'),
+        url('UniSansThinCAPS.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
 
   .LoadingText {
     font-family: "UniSansThinCAPS";

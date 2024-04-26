@@ -25,21 +25,21 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
-    animation-name: "rotate";
+    animation-name: rotate;
 }
 
 .load {
-    animation-name: "show";
+    animation-name: show;
     bottom: 0vh;
 }
 
 .done {
-    animation-name: "hide";
+    animation-name: hide;
     top: 7vh;
 }
 
 .float {
-    animation-name: "float";
+    animation-name: float;
     animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     animation-direction: alternate; 
@@ -48,7 +48,7 @@
 
 
 .SearchItemContainerFirst {
-    animation-name: "revealSearchItem";
+    animation-name: revealSearchItem;
     animation-duration: 0.25s;
     animation-timing-function: ease-out;
     animation-delay: 1s;
@@ -58,7 +58,7 @@
 
 
 .SearchItemContainerSecond {
-    animation-name: "revealSearchItem";
+    animation-name: revealSearchItem;
     animation-duration: 0.25s;
     animation-timing-function: ease-out;
     animation-delay: 1.15s;
@@ -68,7 +68,7 @@
 
 
 .SearchItemContainerThird {
-    animation-name: "revealSearchItem";
+    animation-name: revealSearchItem;
     animation-duration: 0.25s;
     animation-timing-function: ease-out;
     animation-delay: 1.3s;
