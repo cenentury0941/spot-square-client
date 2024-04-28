@@ -38,7 +38,7 @@ function SellerDashboard(props){
             <Typography variant="h3" component="div" textAlign={"left"} margin={0} width={"70%"}>
                 Your QR Codes
             </Typography>
-            <Button size="large" color='secondary' style={{marginLeft:"auto", marginTop:"auto"}}  width={"100%"} onClick={()=>{handleNavigation("seller")}}>view all</Button>
+            <Button size="large" color='secondary' style={{marginLeft:"auto", marginTop:"auto"}}  width={"100%"} onClick={()=>{handleNavigation("qr")}}>view all</Button>
             </div>
             <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
             <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerSecond" />

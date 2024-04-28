@@ -14,6 +14,7 @@ import ProductPage from './components/pages/ProductPage';
 import SellerPage from './components/pages/SellerPage';
 import SellerDashboard from './components/pages/SellerDashboard';
 import { getItems, searchItems } from './api/square';
+import QRPage from './components/pages/QRPage';
 
 const darkTheme = createTheme({
   palette: {
@@ -76,6 +77,7 @@ function App() {
           <Route path="product" element={<ProductPage handleNavigation={handleNavigation}/>} />
           <Route path="seller" element={<SellerPage handleNavigation={handleNavigation}/>} />
           <Route path="sellerDashboard" element={<SellerDashboard handleNavigation={handleNavigation}/>} />
+          <Route path="qr" element={<QRPage handleNavigation={handleNavigation}/>} />
       </Routes>
     </ThemeProvider>
     </div>
