@@ -96,7 +96,7 @@ function SpotAppbar(props) {
                 <MenuItem key={"About"} onClick={() => {handleCloseNavMenu(); handleNavigation("about")}}>
                   <Typography textAlign="center">About</Typography>
                 </MenuItem>
-                <MenuItem key={"Sell"} onClick={() => {handleCloseNavMenu(); handleNavigation("/")}}>
+                <MenuItem key={"Sell"} onClick={() => {handleCloseNavMenu(); handleNavigation("sellerDashboard")}}>
                     <Button variant="outlined" color="secondary">
                     Sell
                     </Button>
@@ -144,7 +144,7 @@ function SpotAppbar(props) {
                 About
               </Button>
                 <Button variant="outlined" color="secondary" sx={{ my : 2 , mx : 1 }}
-                onClick={() => {handleCloseNavMenu(); handleNavigation("/")}}>
+                onClick={() => {handleCloseNavMenu(); handleNavigation("sellerDashboard")}}>
                     Sell
                     </Button>
                 <Button variant="contained" color="secondary" sx={{ my : 2 , mx : 1 }}

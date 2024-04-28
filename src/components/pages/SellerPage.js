@@ -5,17 +5,20 @@ import "../../fonts/Fonts.css";
 import SearchItem from "../SearchItem";
 import { Typography, Button } from "@mui/material";
 import CategoryIcon from '@mui/icons-material/Category';
-import ProductInfo from "../ProductInfo";
+import SellerInfo from "../SellerInfo";
 
-function ProductPage(props){
+function SellerPage(props){
     const handleNavigation = props["handleNavigation"]
 
     return (<div className="ProductInfoContainer">
         <div className="ProductInfoSubContainer">
-            <div style={{display:"flex",width:"90%",flexDirection:"row", alignItems:"center", gap:"10px", marginTop:50, marginBottom:10, paddingBottom:20, borderWidth:0, borderStyle:"solid", borderBottomWidth:2, borderColor:"#403243"}}>
+            <SellerInfo />
+        </div>
+        <div className="ProductInfoSubContainer" style={{overflowY:"scroll"}}>
+        <div style={{display:"flex",width:"90%",flexDirection:"row", alignItems:"center", gap:"10px", marginTop:50, marginBottom:10, paddingBottom:20, borderWidth:0, borderStyle:"solid", borderBottomWidth:2, borderColor:"#403243"}}>
             <CategoryIcon  sx={{ fontSize: 50 }} />
             <Typography variant="h3" component="div" textAlign={"left"} margin={0} width={"90%"}>
-                Products
+                Products Available
             </Typography>
             </div>
             <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
@@ -25,16 +28,7 @@ function ProductPage(props){
             <SearchItem onClick={()=>{handleNavigation("product")}} />
             <SearchItem onClick={()=>{handleNavigation("product")}} />
         </div>
-        <div className="ProductInfoSubContainer" style={{overflowY:"hidden"}}>
-            <ProductInfo handleNavigation={handleNavigation}/>
-            <div className="ProductDetailsFooter">
-                <div className="ProductDetailsFooterContent">
-                    <Button size="medium" color='secondary' style={{marginLeft:"auto"}}>$69.42</Button>
-                    <Button size="medium" variant='contained' color='secondary' onClick={onclick}>Learn More</Button>
-                </div>
-            </div>
-        </div>
     </div>)
 }
 
-export default ProductPage;
+export default SellerPage;

@@ -6,7 +6,6 @@ import "../fonts/Fonts.css"
 function Loading(props){
 
     var animationState = props["animationState"]
-    console.log(props);
 
     return(
         <div className={"Loading " + animationState}>

@@ -7,9 +7,11 @@ import SearchBar from "../SpotSearchBar";
 function Search(props){
 
     const handleNavigation = props["handleNavigation"]
+    const query = props["query"]
+    const setQuery = props["setQuery"]
 
     return( <div className="SearchBackground SearchContainer">
-        <SearchBar handleNavigation={handleNavigation} width="50%"/>
+        <SearchBar handleNavigation={handleNavigation}  query={query} setQuery={setQuery}  width="50%"/>
     </div> )
 }
 

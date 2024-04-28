@@ -117,7 +117,7 @@
 
 .ProductDetailsFooter {
     display: flex;
-    height: 7vh;
+    height: 8vh;
     width: 100%;
     position: sticky;
     bottom: 0;
@@ -157,6 +157,19 @@
     flex-direction: column;
     padding: 10px;
     box-sizing: border-box;
+    flex-shrink: 0;
+    height: 150vh;
+}
+
+
+.SellerDetailsTextContent {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 80vh;
 }
 
 .ProductDetailsImageContent {

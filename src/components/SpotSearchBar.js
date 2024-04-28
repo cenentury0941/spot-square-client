@@ -13,7 +13,8 @@ export default function SearchBar(props) {
 
     const handleNavigation = props["handleNavigation"]
     const width = props["width"] ? props["width"] : "100%"
-
+    const query = props["query"]
+    const setQuery = props["setQuery"]
   return (
     <Paper
       component="form"
@@ -24,6 +25,8 @@ export default function SearchBar(props) {
         sx={{ ml: 1, flex: 1 }}
         placeholder="What's on your mind?"
         inputProps={{ 'aria-label': "What's on your mind?" }}
+        onChange={(event)=>{setQuery(event.target.value)}}
+        value={query} 
       />
       <IconButton type="button" sx={{ p: '10px' }} aria-label="search" onClick={()=>handleNavigation("results")}>
         <SearchIcon />

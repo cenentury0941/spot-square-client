@@ -9,19 +9,20 @@ import SpotSearchItemCard from "../SpotSearchItemCard";
 
 function SearchResults(props){
     const handleNavigation = props["handleNavigation"]
-
+    const query = props["query"]
+    const setQuery = props["setQuery"]
+    const items = props["items"]
     return (<div className="SearchResultsContainer">
         <div className="SearchResultsSubContainer">
             <MapComponent />
         </div>
         <div className="SearchResultsSubContainer">
-            <SearchBar handleNavigation={handleNavigation} width="90%"/>
-            <SearchItem onClick={()=>{handleNavigation("product")}}  position="SearchItemContainerFirst"/>
-            <SearchItem onClick={()=>{handleNavigation("product")}}  position="SearchItemContainerSecond" />
-            <SearchItem onClick={()=>{handleNavigation("product")}}  position="SearchItemContainerThird" />
-            <SearchItem onClick={()=>{handleNavigation("product")}}  />
-            <SearchItem onClick={()=>{handleNavigation("product")}}  />
-            <SearchItem onClick={()=>{handleNavigation("product")}}  />
+            <SearchBar handleNavigation={handleNavigation}  query={query} setQuery={setQuery}   width="90%"/>
+            {
+                items && items.map && items.map(element => {
+                    return <SearchItem onClick={()=>{handleNavigation("product")}} data={element}/>
+                })
+            }
         </div>
     </div>)
 }
