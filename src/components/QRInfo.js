@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./components.css";
 import "./Animations.css";
 import "./../fonts/Fonts.css";
 import { Button, TextField, Typography } from "@mui/material";
 import SellerDetailsTable from "./SellerDetailsTable";
+import QRCode from "react-qr-code";
 import MapComponent from "./MapComponent";
 
 function QRInfo(props){
     const onclick = props["onClick"]
     const handleNavigation = props["handleNavigation"]
+    const [value, setValue] = useState();
+    const [back, setBack] = useState('#FFFFFF');
+    const [fore, setFore] = useState('#000000');
+    const [size, setSize] = useState(256);
 
     return (<div className="ProductDetailsContainer">
             <div className="ProductDetailsHeader">
@@ -32,12 +37,17 @@ function QRInfo(props){
                     <TextField id="outlined-basic" label="Latitude" variant="outlined" fullWidth color="secondary" />
                     <TextField id="outlined-basic" label="Longitude" variant="outlined" fullWidth color="secondary" />
                 </div>
+                <div className="ProductDetailsImageContent">
+                    <div style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed", display:"flex", alignItems:"center", justifyContent:"center", overflow:"hidden", padding:"1vh"}} >
+                        <QRCode value="https://cenentury0941.github.io/spot/" size={"100%"} fgColor={"#000"} />
+                    </div>
                 <div className="ProductDetailsImageContent" style={{gap:"1vh", height:"80vh"}}>
                     <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/qr.png")} />
                     <Button size="medium" color='secondary' variant="contained" style={{marginLeft:"auto", marginRight:"auto", marginTop:"2vh"}} fullWidth width={"90%"} onClick={()=>{handleNavigation("seller")}}>Update</Button>
                     <Button size="medium" color='secondary' variant="outlined" style={{marginLeft:"auto", marginRight:"auto", marginTop:"0vh"}} fullWidth width={"90%"} onClick={()=>{handleNavigation("seller")}}>Download</Button>
                 </div>
-            </div>
+                </div>
+                </div>
     </div>)
 }
 
