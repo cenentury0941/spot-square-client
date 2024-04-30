@@ -7,6 +7,7 @@ import { Typography, Button } from "@mui/material";
 import CategoryIcon from '@mui/icons-material/Category';
 import ProductInfo from "../ProductInfo";
 import QRInfo from "../QRInfo";
+import QRItem from "../QRItem";
 
 function QRPage(props){
     const handleNavigation = props["handleNavigation"]
@@ -19,12 +20,12 @@ function QRPage(props){
                 Your QR Codes
             </Typography>
             </div>
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerSecond" />
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerThird" />
-            <SearchItem onClick={()=>{handleNavigation("product")}} />
-            <SearchItem onClick={()=>{handleNavigation("product")}} />
-            <SearchItem onClick={()=>{handleNavigation("product")}} />
+            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
+            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerSecond" />
+            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerThird" />
+            <QRItem onClick={()=>{handleNavigation("product")}} />
+            <QRItem onClick={()=>{handleNavigation("product")}} />
+            <QRItem onClick={()=>{handleNavigation("product")}} />
         </div>
         <div className="ProductInfoSubContainer" style={{overflowY:"hidden"}}>
             <QRInfo handleNavigation={handleNavigation}/>

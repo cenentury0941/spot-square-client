@@ -41,6 +41,29 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
 }
 
+
+.QRItemContainer {
+    display: flex;
+    width: 90%;
+    height: 20vh;
+    border-radius: 10px;
+    background-color: rgba(21, 21, 21, 0.81);
+    border-color: rgba(44, 0, 38, 0.81);
+    border-width: 1px;
+    border-style: solid;
+    transition-duration: 0.25s;
+    flex-shrink: 0;
+    flex-grow: 0;
+    user-select: none;
+}
+
+.QRItemContainer:hover {
+    background-color: rgb(62, 51, 62);
+    border-color: rgba(0, 0, 0, 0.81);
+    transform: scale(1.001);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.582);
+}
+
 .SearchResultsContainer {
     display: flex;
     height: 93vh;

@@ -7,6 +7,7 @@ import { Typography, Button } from "@mui/material";
 import CategoryIcon from '@mui/icons-material/Category';
 import SellerInfo from "../SellerInfo";
 import LineGraphComponent from "../LineGraphComponent";
+import QRItem from "../QRItem";
 
 function SellerDashboard(props){
     const handleNavigation = props["handleNavigation"]
@@ -40,8 +41,8 @@ function SellerDashboard(props){
             </Typography>
             <Button size="large" color='secondary' style={{marginLeft:"auto", marginTop:"auto"}}  width={"100%"} onClick={()=>{handleNavigation("qr")}}>view all</Button>
             </div>
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerSecond" />
+            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
+            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerSecond" />
         </div>
     </div>)
 }
