@@ -15,7 +15,7 @@ function Home(props){
                 <p className="SubTitleText">Welcome To</p>
                 <p className="TitleText">SPOT</p>
                 <div style={{display:"flex", flexDirection:"row", width:"100%", justifyContent:"center", gap:"2vw"}}>
-                    <Button variant="outlined" fullWidth color="secondary" onClick={() => handleNavigation("/")}><p className="HomeButtons">For Sellers</p></Button>
+                    <Button variant="outlined" fullWidth color="secondary" onClick={() => handleNavigation("sellerDashboard")}><p className="HomeButtons">For Sellers</p></Button>
                     <Button variant="outlined" fullWidth color="secondary" onClick={() => handleNavigation("search")}><p className="HomeButtons">For Buyers</p></Button>
                 </div>
             </div>

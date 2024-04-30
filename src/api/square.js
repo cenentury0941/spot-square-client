@@ -1,5 +1,7 @@
+const baseUrl = "https://spot-square-server.onrender.com"
+
 function getItems(setItems){
-    fetch('http://localhost:3900/items')
+    fetch(baseUrl+'/items')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -15,7 +17,7 @@ function getItems(setItems){
 }
 
 function searchItems(setItems, searchQuery){
-    fetch(`http://localhost:3900/searchItems?searchQuery=${searchQuery}`)
+    fetch(baseUrl+`/searchItems?searchQuery=${searchQuery}`)
     .then(response => {
       if (!response.ok) {
         throw new Error('Network response was not ok');

@@ -8,16 +8,17 @@ import SellerDetailsTable from "./SellerDetailsTable";
 function ProductInfo(props){
     const onclick = props["onClick"]
     const handleNavigation = props["handleNavigation"]
+    const selectedItem = props["selectedItem"]
 
     return (<div className="ProductDetailsContainer">
             <div className="ProductDetailsHeader">
                 <img style={{height:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/crosshair_alpha.png")} />
                 <div style={{display:"flex",flexDirection:"column", paddingLeft:"2vw", width:"100%", height:"100%"}}>
                 <Typography gutterBottom variant="h4" component="div" textAlign={"left"} margin={0}>
-                Product Name Here
+                {selectedItem ? selectedItem["ItemName"] : "Product Name Here" } 
                 </Typography>            
                 <Typography gutterBottom variant="h6" color="text.secondary" component="div" textAlign={"left"}>
-                    Seller Here
+                {selectedItem ? selectedItem["ItemSeller"] : "Seller Name" } 
                 </Typography>
                 <Button size="medium" color='secondary' style={{marginLeft:"auto", marginTop:"auto"}}  width={"100%"} onClick={()=>{handleNavigation("seller")}}>About Seller</Button>
                 </div>
@@ -28,25 +29,22 @@ function ProductInfo(props){
                         Product Details
                     </Typography>
                     <Typography variant="body2" color="text.secondary" width={"100%"} textAlign={"start"} marginTop={"5px"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    {selectedItem ? selectedItem["ItemDesc"] : "No Product Info Available" } 
                     </Typography>
                     <Typography gutterBottom variant="h5" color="text.secondary" component="div" textAlign={"left"} marginTop={"15px"}>
                         Other Details
                     </Typography>
                     <Typography variant="body2" color="text.secondary" width={"100%"} textAlign={"start"} marginTop={"5px"}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </Typography>
+                    The images of products on our website are for illustrative purposes only. The actual product you receive may vary slightly from the image displayed due to factors such as product enhancement, lighting, and monitor settings.</Typography>
                     <Typography gutterBottom variant="h5" color="text.secondary" component="div" textAlign={"left"} marginTop={"15px"}>
                         Seller Details
                     </Typography>
                     <SellerDetailsTable />
                 </div>
                 <div className="ProductDetailsImageContent">
-                    <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/crosshair_alpha.png")} />
-                    <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/crosshair_alpha.png")} />
-                    <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/crosshair_alpha.png")} />
+                    <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/placeholder1.png")} />
+                    <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/store1.png")} />
+                    <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/placeholder2.png")} />
                     <img style={{width:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/crosshair_alpha.png")} />
                 </div>
             </div>

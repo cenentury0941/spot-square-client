@@ -10,16 +10,16 @@ function QRItem(props){
     const onclick = props["onClick"]
     const data = props["data"]
 
-    console.log(props)  
     return (<div className={"QRItemContainer " + position}>
         <div style={{display:"flex",flexDirection:"row",height:"100%",width:"100%",alignItems:"center",justifyContent:"space-between",padding:"15px",boxSizing:"border-box"}}>
             <img style={{height:"100%",aspectRatio:1,borderWidth:"2px",borderRadius:"10px",borderColor:"white",borderStyle:"dashed"}} src={require("./static/qr.png")} />
             <div style={{display:"flex", height:"100%", width:"100%", flexDirection:"column", boxSizing:"border-box", padding:"10px 10px 10px 25px"}}>
             <Typography gutterBottom variant="h5" component="div" textAlign={"left"} margin={0}>
-                { data ? data["ItemName"] : "QR Name here" }
+                { data ? data["name"] : "QR Name here" }
             </Typography>            
             <Typography gutterBottom variant="h6" color="text.secondary" component="div" textAlign={"left"}>
-                Latitude , Longitude
+            { data ? data["lat"] : "Latitude" }
+ ,                 { data ? data["lon"] : "Longitude" }
             </Typography>
             <div style={{display:"flex",width:"100%", height:"30%", overflowY:"scroll"}}>
             </div>

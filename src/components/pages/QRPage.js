@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { getDatabase, ref, set, onValue } from "firebase/database";
 import "../components.css";
 import "../Animations.css";
 import "../../fonts/Fonts.css";
@@ -11,6 +12,18 @@ import QRItem from "../QRItem";
 
 function QRPage(props){
     const handleNavigation = props["handleNavigation"]
+    const [QRCodes, setQRCodes] = useState([])
+    const [selectedQR, setSelectedQR] = useState(null)
+    const db = getDatabase();
+    const QRRef = ref(db, 'spot/');
+
+    useEffect( () => {
+        onValue(QRRef, (snapshot) => {
+            const data = snapshot.val();
+            console.log(data)
+            setQRCodes(data)
+          });
+    } , [] )
 
     return (<div className="ProductInfoContainer">
         <div className="ProductInfoSubContainer">
@@ -20,15 +33,13 @@ function QRPage(props){
                 Your QR Codes
             </Typography>
             </div>
-            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
-            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerSecond" />
-            <QRItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerThird" />
-            <QRItem onClick={()=>{handleNavigation("product")}} />
-            <QRItem onClick={()=>{handleNavigation("product")}} />
-            <QRItem onClick={()=>{handleNavigation("product")}} />
+            {
+                Object.entries(QRCodes).map(([key, value]) => (<QRItem data={value} onClick={()=>{setSelectedQR(value)}} /> ))
+            }
+
         </div>
         <div className="ProductInfoSubContainer" style={{overflowY:"hidden"}}>
-            <QRInfo handleNavigation={handleNavigation}/>
+            <QRInfo selectedQR={selectedQR} handleNavigation={handleNavigation}/>
         </div>
     </div>)
 }

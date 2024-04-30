@@ -9,6 +9,8 @@ import SellerInfo from "../SellerInfo";
 
 function SellerPage(props){
     const handleNavigation = props["handleNavigation"]
+    const items = props["items"]
+    const selectedItem = props["selectedItem"]
 
     return (<div className="ProductInfoContainer">
         <div className="ProductInfoSubContainer">
@@ -21,12 +23,11 @@ function SellerPage(props){
                 Products Available
             </Typography>
             </div>
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerFirst"/>
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerSecond" />
-            <SearchItem onClick={()=>{handleNavigation("product")}} position="SearchItemContainerThird" />
-            <SearchItem onClick={()=>{handleNavigation("product")}} />
-            <SearchItem onClick={()=>{handleNavigation("product")}} />
-            <SearchItem onClick={()=>{handleNavigation("product")}} />
+            {
+                items && items.map && items.map(element => {
+                    return <SearchItem onClick={()=>{selectedItem(element);handleNavigation("product")}} data={element}/>
+                })
+            }
         </div>
     </div>)
 }
